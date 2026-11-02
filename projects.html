@@ -6,80 +6,92 @@
 <title>Projects &ndash; Jose Figueroa</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="shell">
-
-<aside class="panel"><div class="inner">
-  <div class="mono" aria-hidden="true">JF</div>
-  <h1><a href="index.html">Jose Figueroa</a></h1>
-  <p class="title">Chemical engineering undergraduate and aerosol researcher, UC Riverside</p>
+<header class="masthead"><div class="wrap">
+  <h1 class="name"><a href="index.html">Jose Figueroa</a></h1>
+  <p class="role">Undergraduate researcher in aerosol science &middot; Department of Chemical and Environmental Engineering, University of California, Riverside</p>
   <nav aria-label="Main">
     <a href="index.html">About</a>
     <a href="research.html">Research</a>
     <a href="projects.html" aria-current="page">Projects</a>
-    <a href="resume.html">Resume</a>
+    <a href="resume.html">Curriculum Vitae</a>
   </nav>
-  <div class="meta">
-    <div><span>Email</span><code>jfigu052@ucr.edu</code></div>
-    <div><span>LinkedIn</span><a href="https://www.linkedin.com/in/figjose435">linkedin.com/in/figjose435</a></div>
-    <div><span>Handshake</span><a href="https://app.joinhandshake.com/profiles/rjaf6t">Handshake profile</a></div>
-    <div><span>Code</span><a href="https://github.com/lumpygumpy666">GitHub</a></div>
-    <div><span>Based in</span>Indio, California</div>
-    <div><span>Graduating</span>June 2027</div>
+</div></header>
+
+<main><div class="wrap">
+
+<p class="standfirst">Software I wrote because the work in front of me needed it. <strong>Each one is in use</strong> &mdash; in the laboratory, in a course, or on my own bench.</p>
+
+<div class="row">
+  <h2>Instrumentation</h2>
+  <div class="col">
+    <h3>Aerosol Instrument Dashboard</h3>
+    <p class="cite">Python, Streamlit, pandas, LabJack, Raspberry Pi &middot; Petters laboratory</p>
+    <p>An aerosol experiment produces several files per run from instruments that do not share a clock, and reconciling them by hand is where errors enter the record. The dashboard watches for new files, identifies the run, corrects the clock offsets, merges CCN data with the matching DMA and CPC records, and files the completed run in a searchable library. A live panel streams readings from a LabJack on a Raspberry Pi while the experiment is still running.</p>
   </div>
-</div></aside>
-
-<main class="content">
-
-<p class="intro">Five tools I built because the work in front of me needed them. <em>All of them are in use.</em></p>
-
-<section>
-  <h2>Research instrumentation</h2>
-  <h3>Aerosol Instrument Dashboard</h3>
-  <p>The analysis app for the Petters lab. An aerosol experiment produces several files per run from instruments that do not share a clock, and lining them up by hand is where errors get into the record. The dashboard watches for new files, identifies the run, corrects the clock offsets, merges CCN data with the matching DMA and CPC records, and files the finished run in a searchable library. A live panel streams readings from a LabJack on a Raspberry Pi while the experiment is still running.</p>
-  <ul class="pills"><li>Python</li><li>Streamlit</li><li>pandas</li><li>LabJack</li><li>Raspberry Pi</li><li>in daily lab use</li></ul>
-</section>
-
-<section>
-  <h2>Aerosol health</h2>
-  <h3>Lung Deposition Explorer</h3>
-  <p>Particle size decides where in the airway a particle lands, which is why the same mass of aerosol can be harmless or damaging depending on how it is distributed. This tool takes a measured size distribution and reports the fraction depositing in the head, tracheobronchial and alveolar regions, so a distribution can be read as exposure instead of as counts.</p>
-  <ul class="pills"><li>Python</li><li>regional deposition model</li><li>size distributions</li></ul>
-</section>
-
-<section>
-  <h2>Engineering tooling</h2>
-  <h3>ChemE Excel Toolkit and Panel</h3>
-  <p>An Excel add-in that loads the constants and correlations a chemical engineer reaches for into every workbook automatically, with a task pane for the heavier lookups: NIST Antoine coefficients, vapour-liquid equilibrium, and ternary liquid-liquid extraction. It removes the step where a correlation is retyped from a textbook and quietly transcribed wrong.</p>
-  <ul class="pills"><li>Excel add-in</li><li>VBA</li><li>Office.js</li><li>NIST data</li><li>VLE</li><li>LLE</li></ul>
-</section>
-
-<section>
-  <h2>Process control</h2>
-  <h3>OpenCPC Live</h3>
-  <p>A desktop interface for an OpenCPC process control trainer over USB serial. It issues read-only commands and plots the response live, so a control loop can be watched as it settles rather than reconstructed from a logged table afterward.</p>
-  <ul class="pills"><li>Python</li><li>serial</li><li>process control</li><li>live plotting</li></ul>
-</section>
-
-<section>
-  <h2>Coursework tools</h2>
-  <h3>Chemical engineering study apps</h3>
-  <p>A set of companion apps built for my own courses and then kept up: reaction engineering from Fogler, separations, transport phenomena from Welty, and a laboratory companion that pairs equipment manuals with procedures. They work a problem the way the textbook does instead of handing over the answer, which is the only version that was ever useful to me.</p>
-  <ul class="pills"><li>Python</li><li>Streamlit</li><li>kinetics</li><li>separations</li><li>transport</li><li>unit operations</li></ul>
-</section>
-
-<section>
-  <h2>Also in the toolbox</h2>
-  <p>Aspen Plus V14 for process simulation, MATLAB and C++ from coursework, and Autodesk Fusion for the occasional piece of fixturing a bench turns out to need.</p>
-  <div class="actions"><a class="btn" href="resume.html">Resume</a></div>
-</section>
-
-<p class="foot">Jose Figueroa &middot; Indio, California &middot; Updated November 2026</p>
-
-</main>
 </div>
+
+<div class="row">
+  <h2>Exposure</h2>
+  <div class="col">
+    <h3>Lung Deposition Explorer</h3>
+    <p class="cite">Python, regional deposition model</p>
+    <p>Particle size determines where in the respiratory tract a particle deposits, which is why an identical aerosol mass can be innocuous or harmful depending on its distribution. This tool takes a measured size distribution and reports the deposited fraction in the head, tracheobronchial and alveolar regions, allowing a distribution to be read in terms of exposure rather than counts.</p>
+  </div>
+</div>
+
+<div class="row">
+  <h2>Engineering</h2>
+  <div class="col">
+    <h3>ChemE Excel Toolkit and Panel</h3>
+    <p class="cite">Excel add-in, VBA, Office.js</p>
+    <p>An add-in that loads the constants and correlations a chemical engineer reaches for into every workbook automatically, together with a task pane for heavier lookups: NIST Antoine coefficients, vapour-liquid equilibrium, and ternary liquid-liquid extraction. It removes the step in which a correlation is retyped from a textbook and silently transcribed wrong.</p>
+  </div>
+</div>
+
+<div class="row">
+  <h2>Control</h2>
+  <div class="col">
+    <h3>OpenCPC Live</h3>
+    <p class="cite">Python, USB serial, process control</p>
+    <p>A desktop interface to an OpenCPC process control trainer over USB serial. It issues read-only commands and plots the response as it arrives, so a control loop can be watched settling in real time rather than reconstructed afterwards from a logged table.</p>
+  </div>
+</div>
+
+<div class="row">
+  <h2>Teaching</h2>
+  <div class="col">
+    <h3>Chemical engineering study applications</h3>
+    <p class="cite">Python, Streamlit &middot; 2026</p>
+    <p>A set of companion applications built for my own coursework and since maintained: reaction engineering after Fogler, separations, transport phenomena after Welty, and a laboratory companion pairing equipment manuals with experimental procedures. They work a problem the way the textbook does instead of returning an answer, which was the only form that helped me.</p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="rowhead">Also</div>
+  <div class="col">
+    <p>Aspen Plus V14 for process simulation, MATLAB and C++ from coursework, and Autodesk Fusion for the occasional piece of fixturing a bench turns out to need.</p>
+    <div class="actions">
+      <a class="btn" href="resume.html">Curriculum vitae</a>
+      <a class="link-arrow" href="https://github.com/lumpygumpy666">GitHub</a>
+    </div>
+  </div>
+</div>
+
+</div></main>
+
+<footer><div class="wrap">
+  <ul class="contact">
+    <li>Email <code>jfigu052@ucr.edu</code></li>
+    <li><a href="https://www.linkedin.com/in/figjose435">LinkedIn</a></li>
+    <li><a href="https://app.joinhandshake.com/profiles/rjaf6t">Handshake</a></li>
+    <li><a href="https://github.com/lumpygumpy666">GitHub</a></li>
+    <li>Indio, California</li>
+  </ul>
+  <p>Jose Figueroa &middot; last updated November 2026</p>
+</div></footer>
 </body>
 </html>

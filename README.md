@@ -35,5 +35,9 @@ Pushing a commit republishes it. There is nothing to build.
 Colors and fonts are tokens in the `:root` block at the top of `style.css`; the dark
 theme redefines the same tokens further down. Changing a token changes every page.
 
-The contact panel on the left is the same block of HTML in all four pages — edit it in
-one and copy it to the other three.
+Contact details appear twice: the footer list at the bottom of all four pages, and the
+Contact block on `index.html` and `resume.html`. Change a link and you have to change
+it in both places.
+
+Layout: each section is a `.row` — the heading sits in the left margin column, the
+content in the right. At narrow widths the heading stacks above its content.

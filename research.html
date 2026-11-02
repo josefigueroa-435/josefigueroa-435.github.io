@@ -6,109 +6,110 @@
 <title>Research &ndash; Jose Figueroa</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="shell">
-
-<aside class="panel"><div class="inner">
-  <div class="mono" aria-hidden="true">JF</div>
-  <h1><a href="index.html">Jose Figueroa</a></h1>
-  <p class="title">Chemical engineering undergraduate and aerosol researcher, UC Riverside</p>
+<header class="masthead"><div class="wrap">
+  <h1 class="name"><a href="index.html">Jose Figueroa</a></h1>
+  <p class="role">Undergraduate researcher in aerosol science &middot; Department of Chemical and Environmental Engineering, University of California, Riverside</p>
   <nav aria-label="Main">
     <a href="index.html">About</a>
     <a href="research.html" aria-current="page">Research</a>
     <a href="projects.html">Projects</a>
-    <a href="resume.html">Resume</a>
+    <a href="resume.html">Curriculum Vitae</a>
   </nav>
-  <div class="meta">
-    <div><span>Email</span><code>jfigu052@ucr.edu</code></div>
-    <div><span>LinkedIn</span><a href="https://www.linkedin.com/in/figjose435">linkedin.com/in/figjose435</a></div>
-    <div><span>Handshake</span><a href="https://app.joinhandshake.com/profiles/rjaf6t">Handshake profile</a></div>
-    <div><span>Code</span><a href="https://github.com/lumpygumpy666">GitHub</a></div>
-    <div><span>Based in</span>Indio, California</div>
-    <div><span>Graduating</span>June 2027</div>
-  </div>
-</div></aside>
+</div></header>
 
-<main class="content">
+<main><div class="wrap">
 
-<p class="intro">A particle becomes a cloud droplet only if the air is humid enough. <em>The threshold depends on its size.</em></p>
+<p class="standfirst">A particle becomes a cloud droplet only when the air around it is humid enough, and the threshold depends on the particle's size and composition. <strong>Get that relationship wrong and climate models get clouds wrong.</strong> My work is on the measurement end of it.</p>
 
-<section>
-  <h2>The question</h2>
-  <p>How readily an aerosol particle activates into a cloud droplet depends on how large it is and what it is made of. Get that relationship wrong and climate models get clouds wrong, which is one of the largest remaining uncertainties in them. My work is on the measurement end of the problem: making the numbers that come off an aerosol bench trustworthy enough to answer it.</p>
-  <ul class="pills">
-    <li>cloud condensation nuclei</li><li>aerosol size distributions</li><li>atmospheric chemistry</li>
-    <li>air quality</li><li>wildfire smoke</li><li>instrument data</li>
-  </ul>
-</section>
-
-<section>
+<div class="row">
   <h2>Experimental</h2>
-  <h3>Size-selected CCN activation</h3>
-  <p>A differential mobility analyzer pulls a single particle size out of a polydisperse stream. That monodisperse flow is split in two: a condensation particle counter counts every particle present, and a CCN-100 counter counts only the ones that activate into droplets at a set supersaturation. The ratio of the two, scanned across sizes and supersaturations, gives the activation curve and the critical diameter.</p>
-  <dl class="facts">
-    <div><dt>Size selection</dt><dd>Dual DMA</dd></div>
-    <div><dt>Total count</dt><dd>CPC</dd></div>
-    <div><dt>Activated count</dt><dd>CCN-100</dd></div>
-    <div><dt>Distributions</dt><dd>SMPS</dd></div>
-  </dl>
-</section>
+  <div class="col">
+    <h3>Size-selected CCN activation</h3>
+    <p>A differential mobility analyzer selects a single mobility diameter from a polydisperse aerosol stream. The resulting monodisperse flow is split in two: a condensation particle counter counts every particle present, while a CCN-100 counter counts only those that activate into droplets at a set supersaturation. The ratio of the two, scanned across diameters and supersaturations, gives the activation curve and with it the critical diameter.</p>
+    <dl class="deflist">
+      <dt>Size selection</dt><dd>Dual differential mobility analyzer</dd>
+      <dt>Total count</dt><dd>Condensation particle counter</dd>
+      <dt>Activated count</dt><dd>CCN-100 counter</dd>
+      <dt>Distributions</dt><dd>Scanning mobility particle sizer</dd>
+    </dl>
+  </div>
+</div>
 
-<section>
+<div class="row">
   <h2>Method</h2>
-  <h3>Correcting for chamber wall loss</h3>
-  <p>During a chamber experiment, particles are continuously lost to the walls by diffusion and settling. The measured distribution decays over the run even when nothing chemically changes, and because the loss rate depends on particle size, the shape of the distribution distorts rather than simply scaling down. Every quantity derived from it inherits that distortion.</p>
-  <p>I fit an eddy-diffusivity wall-loss model to the SMPS scan series and apply the correction per size bin, so the reported distribution describes the aerosol that was suspended rather than the fraction that reached the inlet.</p>
-</section>
+  <div class="col">
+    <h3>Correcting for chamber wall loss</h3>
+    <p>Over the course of a chamber experiment, particles are continuously lost to the walls by diffusion and gravitational settling. The measured size distribution therefore decays even when no chemistry is occurring, and because the loss rate is strongly size-dependent, the distribution changes shape rather than simply decreasing in magnitude. Any quantity derived from it inherits that distortion.</p>
+    <p>I fit an eddy-diffusivity wall-loss model to the SMPS scan series and apply the correction per size bin, so that the reported distribution describes the aerosol suspended in the chamber rather than the fraction that happened to reach the inlet.</p>
+  </div>
+</div>
 
-<section>
+<div class="row">
   <h2>Software</h2>
-  <h3>Making the data usable</h3>
-  <p>Two instruments recording the same experiment rarely agree on what time it is, and a few seconds of offset is enough to smear an activation curve. The lab's analysis app, which I lead the development of, takes that over along with the rest of the routine handling:</p>
-  <ul class="plain">
-    <li>Detects new instrument files as they are written and identifies the run they belong to</li>
-    <li>Corrects clock offsets between instruments before anything is merged</li>
-    <li>Joins CCN records to their matching DMA and CPC records into one analyzed run</li>
-    <li>Keeps every processed run in a searchable library, so past results are reopened rather than rederived</li>
-    <li>Streams live readings from a LabJack on a Raspberry Pi during an experiment</li>
-  </ul>
-  <ul class="pills"><li>Python</li><li>pandas</li><li>NumPy</li><li>Streamlit</li><li>LabJack</li><li>Raspberry Pi</li></ul>
-</section>
+  <div class="col">
+    <h3>Analysis infrastructure for the laboratory</h3>
+    <p>Two instruments recording the same experiment rarely agree about the time, and an offset of a few seconds is enough to smear an activation curve. I lead the development of the laboratory's analysis application, which takes that over along with the rest of the routine handling:</p>
+    <ul>
+      <li>Detects instrument files as they are written and identifies the run to which each belongs</li>
+      <li>Corrects clock offsets between instruments before any merge is attempted</li>
+      <li>Joins CCN records with their matching DMA and CPC records into a single analysed run</li>
+      <li>Maintains a searchable library of processed runs, so earlier results are reopened rather than rederived</li>
+      <li>Streams live readings from a LabJack on a Raspberry Pi while an experiment is in progress</li>
+    </ul>
+    <ul class="keywords">
+      <li>Python</li><li>pandas</li><li>NumPy</li><li>Streamlit</li><li>LabJack</li><li>Raspberry Pi</li>
+    </ul>
+  </div>
+</div>
 
-<section>
-  <h2>Presented and trained</h2>
-  <div class="rows">
-    <div class="rowitem">
-      <div class="body">
-        <h3>Best Research Presentation, MSRIP</h3>
-        <p class="org">Mentoring Summer Research Internship Program, UC Riverside</p>
-        <p>Presented the aerosol work at the program's closing symposium. Head of safety and procedures for the research team.</p>
-      </div>
-      <div class="when">Summer 2026</div>
-    </div>
-    <div class="rowitem">
-      <div class="body">
-        <h3>Laboratory coursework</h3>
-        <p class="org">UC Riverside</p>
-        <p>UV-Vis, IR, TLC and GC with spectral interpretation and formal technical reporting, alongside chemical engineering laboratory, process control, fluid dynamics, and engineering modeling and analysis.</p>
-      </div>
-      <div class="when">2023&ndash;2026</div>
+<div class="row">
+  <h2>Presentations</h2>
+  <div class="col">
+    <div class="item">
+      <h3>Best Research Presentation</h3>
+      <p class="cite"><em>Mentoring Summer Research Internship Program</em>, University of California, Riverside &middot; summer 2026</p>
+      <p>Presented the aerosol work at the closing symposium of the program. Head of safety and procedures for the research team.</p>
     </div>
   </div>
-</section>
-
-<section>
-  <h2>Next</h2>
-  <p>I am applying to chemical and environmental engineering PhD programs for fall 2027 in aerosols, atmospheric chemistry and air quality. If your group works on any of it, I would be glad to hear from you.</p>
-  <div class="actions"><a class="btn" href="resume.html">Resume</a></div>
-</section>
-
-<p class="foot">Jose Figueroa &middot; Indio, California &middot; Updated November 2026</p>
-
-</main>
 </div>
+
+<div class="row">
+  <h2>Training</h2>
+  <div class="col">
+    <div class="item">
+      <h3>Laboratory coursework</h3>
+      <p class="cite">University of California, Riverside &middot; 2023&ndash;2026</p>
+      <p>UV-Vis, infrared, thin-layer chromatography and gas chromatography, with spectral interpretation and formal technical reporting; chemical engineering laboratory, process control, fluid dynamics, and engineering modeling and analysis.</p>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="rowhead">Looking ahead</div>
+  <div class="col">
+    <p>I am applying to chemical and environmental engineering doctoral programs for fall 2027, in aerosols, atmospheric chemistry and air quality. If your group works in any of these areas, I would welcome a conversation.</p>
+    <div class="actions">
+      <a class="btn" href="resume.html">Curriculum vitae</a>
+      <a class="link-arrow" href="projects.html">Projects</a>
+    </div>
+  </div>
+</div>
+
+</div></main>
+
+<footer><div class="wrap">
+  <ul class="contact">
+    <li>Email <code>jfigu052@ucr.edu</code></li>
+    <li><a href="https://www.linkedin.com/in/figjose435">LinkedIn</a></li>
+    <li><a href="https://app.joinhandshake.com/profiles/rjaf6t">Handshake</a></li>
+    <li><a href="https://github.com/lumpygumpy666">GitHub</a></li>
+    <li>Indio, California</li>
+  </ul>
+  <p>Jose Figueroa &middot; last updated November 2026</p>
+</div></footer>
 </body>
 </html>

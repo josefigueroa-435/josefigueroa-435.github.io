@@ -7,102 +7,125 @@
 <title>Jose Figueroa</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="shell">
-
-<aside class="panel"><div class="inner">
-  <div class="mono" aria-hidden="true">JF</div>
-  <h1><a href="index.html">Jose Figueroa</a></h1>
-  <p class="title">Chemical engineering undergraduate and aerosol researcher, UC Riverside</p>
+<header class="masthead"><div class="wrap">
+  <h1 class="name"><a href="index.html">Jose Figueroa</a></h1>
+  <p class="role">Undergraduate researcher in aerosol science &middot; Department of Chemical and Environmental Engineering, University of California, Riverside</p>
   <nav aria-label="Main">
     <a href="index.html" aria-current="page">About</a>
     <a href="research.html">Research</a>
     <a href="projects.html">Projects</a>
-    <a href="resume.html">Resume</a>
+    <a href="resume.html">Curriculum Vitae</a>
   </nav>
-  <div class="meta">
-    <div><span>Email</span><code>jfigu052@ucr.edu</code></div>
-    <div><span>LinkedIn</span><a href="https://www.linkedin.com/in/figjose435">linkedin.com/in/figjose435</a></div>
-    <div><span>Handshake</span><a href="https://app.joinhandshake.com/profiles/rjaf6t">Handshake profile</a></div>
-    <div><span>Code</span><a href="https://github.com/lumpygumpy666">GitHub</a></div>
-    <div><span>Based in</span>Indio, California</div>
-    <div><span>Graduating</span>June 2027</div>
-  </div>
-</div></aside>
+</div></header>
 
-<main class="content">
+<main><div class="wrap">
 
-<p class="intro">I measure the particles that turn water vapour into clouds &mdash; and write the software that makes those measurements <em>hold up</em>.</p>
+<p class="standfirst">I work on <strong>cloud condensation nuclei</strong> &mdash; the aerosol particles that water vapour needs in order to become a cloud droplet. My interest is in the measurement itself: what an aerosol instrument actually reports, what it quietly gets wrong, and what has to be corrected before a number means anything.</p>
 
-<section>
+<div class="row">
   <h2>About</h2>
-  <p>I am an undergraduate chemical engineering student at UC Riverside and a researcher in Dr.&nbsp;Sarah Petters' aerosol laboratory at CE-CERT. On the bench I run size-selected cloud condensation nuclei experiments: a differential mobility analyzer picks one particle size, a condensation particle counter counts everything, and a CCN counter counts only what becomes a droplet.</p>
-  <p>The other half of the job is software. Instruments disagree about the time, particles vanish to chamber walls mid-experiment, and results that took a week to produce get lost in a folder. I built the lab's analysis app to close those gaps, and most of what I know about engineering judgement came from doing it.</p>
-  <p>Before this I spent ten years as a certified pharmacy technician, where a careless result has a person on the other end of it. That is still how I think about data.</p>
-  <div class="actions">
-    <a class="btn" href="research.html">See the research</a>
-    <a class="btn ghost" href="resume.html">Resume</a>
+  <div class="col">
+    <p>I am an undergraduate in chemical engineering at UC Riverside, graduating in June 2027, and a student researcher in Dr.&nbsp;Sarah Petters' aerosol laboratory at CE-CERT. On the bench I run size-selected CCN activation experiments. Away from it, I develop the lab's analysis software, which is where most of the subtleties live: instruments that disagree about the time, particles lost to chamber walls mid-experiment, results that have to be found again a year later.</p>
+    <p>I came to engineering after ten years as a certified pharmacy technician, a decade of work where a careless result has a person on the other end of it. That shaped how I treat data more than any course has.</p>
+    <p>I am applying to chemical and environmental engineering doctoral programs for fall 2027.</p>
   </div>
-</section>
-
-<section>
-  <h2>At a glance</h2>
-  <dl class="facts">
-    <div><dt>Degree</dt><dd>B.S. Chemical Engineering</dd></div>
-    <div><dt>University</dt><dd>UC Riverside</dd></div>
-    <div><dt>Graduating</dt><dd>June 2027</dd></div>
-    <div><dt>Research group</dt><dd>Petters lab, CE-CERT</dd></div>
-    <div><dt>Award</dt><dd>Best Research Presentation, MSRIP 2026</dd></div>
-    <div><dt>Prior career</dt><dd>Pharmacy technician, 10 years</dd></div>
-  </dl>
-</section>
-
-<section>
-  <h2>What I work on</h2>
-  <div class="rows">
-    <div class="rowitem">
-      <div class="body">
-        <h3>Size-selected CCN activation</h3>
-        <p class="org">Petters aerosol lab, CE-CERT</p>
-        <p>Measuring the supersaturation at which particles of a chosen size activate into cloud droplets, using a CCN-100 counter with dual DMA and CPC.</p>
-      </div>
-      <div class="when">2026&ndash;present</div>
-    </div>
-    <div class="rowitem">
-      <div class="body">
-        <h3>SMPS chamber wall-loss correction</h3>
-        <p class="org">Method development</p>
-        <p>Particles are lost to the chamber walls at a size-dependent rate, which distorts the shape of every distribution measured. An eddy-diffusivity fit corrects it per size bin.</p>
-      </div>
-      <div class="when">2026</div>
-    </div>
-    <div class="rowitem">
-      <div class="body">
-        <h3>Aerosol Instrument Dashboard</h3>
-        <p class="org">Python, Streamlit, LabJack</p>
-        <p>Automatic file detection, instrument clock-offset correction, CCN and DMA/CPC run merging, a searchable library of results, and live streaming from a Raspberry Pi.</p>
-      </div>
-      <div class="when">2026&ndash;present</div>
-    </div>
-  </div>
-  <div class="actions"><a class="btn ghost" href="projects.html">All projects</a></div>
-</section>
-
-<section>
-  <h2>Skills</h2>
-  <ul class="pills">
-    <li>Python</li><li>pandas</li><li>NumPy</li><li>Streamlit</li><li>MATLAB</li><li>C++</li>
-    <li>Aspen Plus V14</li><li>Advanced Excel</li><li>VBA</li><li>SMPS</li><li>DMA</li><li>CPC</li>
-    <li>CCN-100</li><li>LabJack</li><li>Raspberry Pi</li><li>UV-Vis</li><li>IR</li><li>GC</li><li>TLC</li>
-  </ul>
-</section>
-
-<p class="foot">Jose Figueroa &middot; Indio, California &middot; Updated November 2026</p>
-
-</main>
 </div>
+
+<div class="row">
+  <h2>Interests</h2>
+  <div class="col">
+    <ul class="keywords">
+      <li>cloud condensation nuclei</li>
+      <li>aerosol size distributions</li>
+      <li>atmospheric chemistry</li>
+      <li>mineral and agricultural dust</li>
+      <li>wildfire smoke</li>
+      <li>air quality and exposure</li>
+      <li>particle transport and deposition</li>
+      <li>scientific instrumentation</li>
+    </ul>
+  </div>
+</div>
+
+<div class="row">
+  <h2>Education</h2>
+  <div class="col">
+    <div class="item">
+      <h3>B.S., Chemical Engineering</h3>
+      <p class="cite">University of California, Riverside &middot; expected June 2027</p>
+    </div>
+    <div class="item">
+      <h3>A.S., Chemistry</h3>
+      <p class="cite">College of the Desert, Palm Desert, California &middot; May 2020</p>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <h2>Current work</h2>
+  <div class="col">
+    <div class="item">
+      <h3>Size-selected CCN activation</h3>
+      <p class="cite">Petters aerosol laboratory, CE-CERT &middot; 2026&ndash;present</p>
+      <p>Activation measurements on a CCN-100 counter paired with a differential mobility analyzer and a condensation particle counter, scanning across particle size and supersaturation.</p>
+    </div>
+    <div class="item">
+      <h3>Wall-loss correction for chamber size distributions</h3>
+      <p class="cite">Method development &middot; 2026</p>
+      <p>An eddy-diffusivity model fitted to SMPS scan series, correcting the size-dependent loss of particles to chamber walls so that reported distributions describe what was suspended.</p>
+    </div>
+    <div class="item">
+      <h3>Analysis software for the laboratory</h3>
+      <p class="cite">Python, Streamlit, LabJack &middot; 2026&ndash;present</p>
+      <p>Automatic instrument file detection, clock-offset correction between instruments, merging of CCN and DMA/CPC runs, a searchable library of processed results, and live streaming from a LabJack on a Raspberry Pi.</p>
+    </div>
+    <p><a class="link-arrow" href="research.html">Read more about the research</a></p>
+  </div>
+</div>
+
+<div class="row">
+  <h2>Awards</h2>
+  <div class="col">
+    <div class="item">
+      <h3>Best Research Presentation</h3>
+      <p class="cite"><em>Mentoring Summer Research Internship Program (MSRIP)</em>, University of California, Riverside &middot; summer 2026</p>
+      <p>Awarded at the close of the program. Served as head of safety and procedures for the research team.</p>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="rowhead">Contact</div>
+  <div class="col">
+    <dl class="deflist">
+      <dt>Email</dt><dd><code>jfigu052@ucr.edu</code></dd>
+      <dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/figjose435">linkedin.com/in/figjose435</a></dd>
+      <dt>Handshake</dt><dd><a href="https://app.joinhandshake.com/profiles/rjaf6t">Handshake profile</a></dd>
+      <dt>Code</dt><dd><a href="https://github.com/lumpygumpy666">GitHub</a></dd>
+      <dt>Location</dt><dd>Indio, California</dd>
+    </dl>
+    <div class="actions">
+      <a class="btn" href="resume.html">Curriculum vitae</a>
+      <a class="link-arrow" href="Jose-Figueroa-Resume.pdf">Download PDF</a>
+    </div>
+  </div>
+</div>
+
+</div></main>
+
+<footer><div class="wrap">
+  <ul class="contact">
+    <li>Email <code>jfigu052@ucr.edu</code></li>
+    <li><a href="https://www.linkedin.com/in/figjose435">LinkedIn</a></li>
+    <li><a href="https://app.joinhandshake.com/profiles/rjaf6t">Handshake</a></li>
+    <li><a href="https://github.com/lumpygumpy666">GitHub</a></li>
+    <li>Indio, California</li>
+  </ul>
+  <p>Jose Figueroa &middot; last updated November 2026</p>
+</div></footer>
 </body>
 </html>
