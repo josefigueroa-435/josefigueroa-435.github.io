@@ -13,10 +13,9 @@ Jose-Figueroa-Resume.pdf
 
 ## Before it goes live
 
-- [ ] Replace `LINKEDIN-URL-HERE` in all four HTML files with the real LinkedIn URL.
-- [ ] Replace `HANDSHAKE-URL-HERE` with the public profile link, or delete that row.
-      Handshake profiles are private by default; the public link has to be switched on
-      under Settings, then copied with the Share button on the profile.
+- [x] LinkedIn and Handshake links are in.
+- [ ] Confirm the Handshake public profile is switched on (profile icon → Settings),
+      otherwise that link asks visitors to log in.
 - [ ] Replace the `Jose-Figueroa-Resume.pdf` with a web copy that has the phone number removed.
 - [ ] Decide on the GitHub account name — it appears in the GitHub link on every page
       and in the site's own URL.
