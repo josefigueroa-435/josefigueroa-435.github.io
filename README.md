@@ -17,19 +17,19 @@ Jose-Figueroa-Resume.pdf
 - [ ] Confirm the Handshake public profile is switched on (profile icon → Settings),
       otherwise that link asks visitors to log in.
 - [ ] Replace the `Jose-Figueroa-Resume.pdf` with a web copy that has the phone number removed.
-- [x] GitHub account name decided: `josefigueroa-chemE`. Rename the existing account
+- [x] GitHub account name decided: `josefigueroa-435`. Rename the existing account
       under Settings → Account → Change username before publishing, or the links on
       every page will 404.
 - [ ] Optional: add a photo.
 
-The live URL will be **https://josefigueroa-cheme.github.io** (GitHub lowercases it).
+The live URL will be **https://josefigueroa-435.github.io**.
 
 ## Publishing on GitHub Pages
 
-1. Create a new **public** repository named `josefigueroa-chemE.github.io`.
+1. Create a new **public** repository named `josefigueroa-435.github.io`.
 2. In GitHub Desktop: File → Add local repository → this folder → Publish.
 3. Repository → Settings → Pages → Source: *Deploy from a branch*, branch `main`, folder `/ (root)`.
-4. The site appears at `https://josefigueroa-cheme.github.io` within a minute or two.
+4. The site appears at `https://josefigueroa-435.github.io` within a minute or two.
 
 Pushing a commit republishes it. There is nothing to build.
 
