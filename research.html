@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Research &ndash; Jose Figueroa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="shell">
+
+<aside class="panel"><div class="inner">
+  <div class="mono" aria-hidden="true">JF</div>
+  <h1><a href="index.html">Jose Figueroa</a></h1>
+  <p class="title">Chemical engineering undergraduate and aerosol researcher, UC Riverside</p>
+  <nav aria-label="Main">
+    <a href="index.html">About</a>
+    <a href="research.html" aria-current="page">Research</a>
+    <a href="projects.html">Projects</a>
+    <a href="resume.html">Resume</a>
+  </nav>
+  <div class="meta">
+    <div><span>Email</span><code>jfigu052@ucr.edu</code></div>
+    <div><span>LinkedIn</span><a href="LINKEDIN-URL-HERE">linkedin.com/in/...</a></div>
+    <div><span>Code</span><a href="https://github.com/lumpygumpy666">GitHub</a></div>
+    <div><span>Based in</span>Indio, California</div>
+    <div><span>Graduating</span>June 2027</div>
+  </div>
+</div></aside>
+
+<main class="content">
+
+<p class="intro">A particle becomes a cloud droplet only if the air is humid enough. <em>The threshold depends on its size.</em></p>
+
+<section>
+  <h2>The question</h2>
+  <p>How readily an aerosol particle activates into a cloud droplet depends on how large it is and what it is made of. Get that relationship wrong and climate models get clouds wrong, which is one of the largest remaining uncertainties in them. My work is on the measurement end of the problem: making the numbers that come off an aerosol bench trustworthy enough to answer it.</p>
+  <ul class="pills">
+    <li>cloud condensation nuclei</li><li>aerosol size distributions</li><li>atmospheric chemistry</li>
+    <li>air quality</li><li>wildfire smoke</li><li>instrument data</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Experimental</h2>
+  <h3>Size-selected CCN activation</h3>
+  <p>A differential mobility analyzer pulls a single particle size out of a polydisperse stream. That monodisperse flow is split in two: a condensation particle counter counts every particle present, and a CCN-100 counter counts only the ones that activate into droplets at a set supersaturation. The ratio of the two, scanned across sizes and supersaturations, gives the activation curve and the critical diameter.</p>
+  <dl class="facts">
+    <div><dt>Size selection</dt><dd>Dual DMA</dd></div>
+    <div><dt>Total count</dt><dd>CPC</dd></div>
+    <div><dt>Activated count</dt><dd>CCN-100</dd></div>
+    <div><dt>Distributions</dt><dd>SMPS</dd></div>
+  </dl>
+</section>
+
+<section>
+  <h2>Method</h2>
+  <h3>Correcting for chamber wall loss</h3>
+  <p>During a chamber experiment, particles are continuously lost to the walls by diffusion and settling. The measured distribution decays over the run even when nothing chemically changes, and because the loss rate depends on particle size, the shape of the distribution distorts rather than simply scaling down. Every quantity derived from it inherits that distortion.</p>
+  <p>I fit an eddy-diffusivity wall-loss model to the SMPS scan series and apply the correction per size bin, so the reported distribution describes the aerosol that was suspended rather than the fraction that reached the inlet.</p>
+</section>
+
+<section>
+  <h2>Software</h2>
+  <h3>Making the data usable</h3>
+  <p>Two instruments recording the same experiment rarely agree on what time it is, and a few seconds of offset is enough to smear an activation curve. The lab's analysis app, which I lead the development of, takes that over along with the rest of the routine handling:</p>
+  <ul class="plain">
+    <li>Detects new instrument files as they are written and identifies the run they belong to</li>
+    <li>Corrects clock offsets between instruments before anything is merged</li>
+    <li>Joins CCN records to their matching DMA and CPC records into one analyzed run</li>
+    <li>Keeps every processed run in a searchable library, so past results are reopened rather than rederived</li>
+    <li>Streams live readings from a LabJack on a Raspberry Pi during an experiment</li>
+  </ul>
+  <ul class="pills"><li>Python</li><li>pandas</li><li>NumPy</li><li>Streamlit</li><li>LabJack</li><li>Raspberry Pi</li></ul>
+</section>
+
+<section>
+  <h2>Presented and trained</h2>
+  <div class="rows">
+    <div class="rowitem">
+      <div class="body">
+        <h3>Best Research Presentation, MSRIP</h3>
+        <p class="org">Mentoring Summer Research Internship Program, UC Riverside</p>
+        <p>Presented the aerosol work at the program's closing symposium. Head of safety and procedures for the research team.</p>
+      </div>
+      <div class="when">Summer 2026</div>
+    </div>
+    <div class="rowitem">
+      <div class="body">
+        <h3>Laboratory coursework</h3>
+        <p class="org">UC Riverside</p>
+        <p>UV-Vis, IR, TLC and GC with spectral interpretation and formal technical reporting, alongside chemical engineering laboratory, process control, fluid dynamics, and engineering modeling and analysis.</p>
+      </div>
+      <div class="when">2023&ndash;2026</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Next</h2>
+  <p>I am applying to chemical and environmental engineering PhD programs for fall 2027 in aerosols, atmospheric chemistry and air quality. If your group works on any of it, I would be glad to hear from you.</p>
+  <div class="actions"><a class="btn" href="resume.html">Resume</a></div>
+</section>
+
+<p class="foot">Jose Figueroa &middot; Indio, California &middot; Updated November 2026</p>
+
+</main>
+</div>
+</body>
+</html>
